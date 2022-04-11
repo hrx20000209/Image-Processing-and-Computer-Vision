@@ -40,6 +40,7 @@ def vis_hybrid_image(hybrid_image):
         output = np.hstack((output, tmp))
     return output
 
+
 def load_image(path):
     return img_as_float32(io.imread(path))
 

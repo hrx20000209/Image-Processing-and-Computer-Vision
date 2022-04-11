@@ -21,7 +21,7 @@ resultsDir = '..' + os.sep + 'results'
 if not os.path.exists(resultsDir):
     os.mkdir(resultsDir)
 
-test_image = load_image('../data/cat.bmp')
+test_image = load_image('../data/3-cat.bmp')
 test_image = rescale(test_image, 0.7, mode='reflect', multichannel=True)
 
 '''

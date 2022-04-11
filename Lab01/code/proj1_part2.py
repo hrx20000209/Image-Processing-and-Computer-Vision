@@ -23,8 +23,8 @@ from student import my_imfilter, gen_hybrid_image
 
 # Setup
 # Read images and convert to floating point format
-image1 = load_image('../data/dog.bmp')
-image2 = load_image('../data/cat.bmp')
+image1 = load_image('../data/3-dog.bmp')
+image2 = load_image('../data/3-cat.bmp')
 
 # display the dog and cat images
 plt.figure(figsize=(3, 3))
