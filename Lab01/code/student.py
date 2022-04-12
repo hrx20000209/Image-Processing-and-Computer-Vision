@@ -10,6 +10,7 @@
 # CS 4495/6476 @ Georgia Tech
 import numpy as np
 from numpy import pi, exp, sqrt
+import torch
 from skimage import io, img_as_ubyte, img_as_float32
 from skimage.transform import rescale
 
@@ -60,7 +61,7 @@ def my_imfilter(image, kernel):
         channel = color_channel[i]
         result = np.zeros(channel.shape, dtype=np.float32)
         channel_padded = np.pad(
-            channel, [(padding_row, padding_row), (padding_col, padding_col)], mode='constant')
+            channel, [(padding_row, padding_row), (padding_col, padding_col)], mode='reflect')
         for col in range(channel.shape[1]):
             for row in range(channel.shape[0]):
                 result[row, col] = (
